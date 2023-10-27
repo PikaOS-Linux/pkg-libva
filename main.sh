@@ -3,9 +3,9 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-mkdir -p ./src-pkg-name
-cp -rvf ./debian ./src-pkg-name/
-cd ./src-pkg-name/
+git clone https://github.com/intel/libva -b 2.20.0
+cp -rvf ./debian ./libva/
+cd ./libva/
 
 # Get build deps
 apt-get build-dep ./ -y
